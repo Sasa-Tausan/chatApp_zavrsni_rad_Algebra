@@ -1,0 +1,256 @@
+/*reset Css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*root component*/
+:root {
+  height: 100vh;
+  width: 100vw;
+  background-color: #ede5f1;
+  display: flex;
+  justify-content: center;
+}
+
+/*App component */
+.App {
+  max-width: 768px;
+  width: calc(100vw - 10px);
+  border: 1px solid #ee8db4;
+  border-radius: 10px;
+  height: 98vh;
+}
+
+/*ChatApp component*/
+
+.ChatApp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ChatApp-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #ebc94a;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.Logo {
+  width: 95px;
+}
+
+.Main-title {
+  flex: 2;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.75rem;
+}
+
+/*LoginForm component*/
+.LoginForm {
+  border: 5px solid #ee8db4;
+  border-radius: 10px;
+  padding: 10px;
+  align-self: center;
+  margin-top: 25%;
+}
+
+.LoginForm-title {
+  text-align: center;
+  font-weight: bold;
+  color: #8264da;
+  font-size: 1.75rem;
+}
+
+.InputForm {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.InputUser-container,
+.PickColor-container {
+  display: flex;
+  align-items: center;
+  column-gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type='text'] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #8264da;
+  font-size: 1.3rem;
+  padding: 0.2rem;
+}
+
+input[type='text']:focus {
+  outline: none;
+  border: 2px solid #8264da;
+  border-radius: 5px;
+}
+
+input[type='color'] {
+  cursor: pointer;
+}
+
+label[for='color'] {
+  color: #8264da;
+  font-weight: bold;
+  margin-left: 0.3rem;
+}
+
+.Btn {
+  background-color: #8264da;
+  align-self: center;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 4px #8264da78;
+  width: 70%;
+  font-size: 1.2rem;
+}
+
+.Btn:hover {
+  background-color: #8264dabe;
+  font-weight: bold;
+}
+
+/*ChatRoom component*/
+.ChatRoom {
+  width: 100%;
+  height: 100%;
+  padding: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.MessageList-container {
+  width: 100%;
+  height: 95%;
+  overflow-y: auto;
+}
+
+.MessageList {
+  /*ul element*/
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Message-content {
+  /*li*/
+  width: 35%;
+  margin-bottom: 0.5rem;
+}
+
+.Message-content-me {
+  /*li*/
+  width: 35%;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  align-self: flex-end;
+}
+
+.Message-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.Message-header-me {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.Avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.Username {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.Message {
+  background-color: #e3618e97;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.Message-me {
+  background-color: #977ae289;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.Timestamp {
+  font-style: italic;
+  text-align: end;
+}
+
+.Input {
+  width: 100%;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.InputMessage {
+  width: 70%;
+  margin-left: 1rem;
+}
+
+.Btn-send {
+  background-color: #8264da;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 4px #8264da78;
+  width: 15%;
+  font-size: 1rem;
+}
+
+/*Scrollbar style*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 50px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #8264da;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ee8db4;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fa5899;
+}
